@@ -8,5 +8,4 @@ lightgbm
 gensim
 scikit-surprise
 nltk
-re
-string
+
