@@ -1,0 +1,4 @@
+Model,RMSE,MAE,Precision@10,Recall@10
+Hybrid (SVD+Doc2Vec),0.53,0.43,0.06,0.55
+SVD,0.7,0.52,,
+Doc2Vec,,,0.0,0.0
