@@ -34,8 +34,8 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     try:
-        df_ratings = pd.read_csv('C://Users//user//Desktop//rec_project//df_ratings.csv')
-        df_courses = pd.read_csv('C://Users//user//Desktop//rec_project//info2022_final.csv')
+        df_ratings = pd.read_csv('Desktop/rec_project2/df_ratings.csv')
+        df_courses = pd.read_csv('Desktop/rec_project2/info2022_final.csv')
         
         # Проверяем и переименовываем необходимые колонки
         if 'Course ID' in df_courses.columns:
