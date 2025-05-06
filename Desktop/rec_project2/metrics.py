@@ -24,7 +24,7 @@ st.dataframe(df_content.style.highlight_max(axis=0, subset=['Precision@10', 'Rec
 
 # Новый раздел с метриками гибридной модели
 st.header('3. Гибридная модель (SVD + Doc2Vec)')
-df_hybrid = pd.read_csv('C://Users//user//Desktop//rec_project//compare_table.csv')
+df_hybrid = pd.read_csv('Desktop/rec_project2/compare_table.csv')
 
 st.subheader('Сравнение')
 st.dataframe(df_hybrid.style.highlight_max(axis=0, 
