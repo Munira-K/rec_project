@@ -14,11 +14,8 @@ import nltk
 import re
 import string
 
-for resource in ['punkt', 'wordnet', 'stopwords']:
-    try:
-        nltk.data.find(f'tokenizers/{resource}' if resource == 'punkt' else f'corpora/{resource}')
-    except LookupError:
-        nltk.download(resource)
+import nltk
+nltk.download('punkt')
 
 # Инициализация
 stop_words = set(stopwords.words('english'))
