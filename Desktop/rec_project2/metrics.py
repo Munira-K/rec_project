@@ -6,9 +6,9 @@ import plotly.express as px
 st.title('📊 Сравнение моделей рекомендательных систем')
 
 # Данные для таблиц метрик (примерные значения - замените вашими реальными метриками)
-df_collab = pd.read_csv('C://Users//user//Desktop//rec_project//metrics_table.csv')
-df_content = pd.read_csv('C://Users//user//Desktop//rec_project//content_metrics_table.csv')
-df_hybrid = pd.read_csv('C://Users//user//Desktop//rec_project//hybrid_metrics.csv')
+df_collab = pd.read_csv('Desktop/rec_project2/metrics_table.csv')
+df_content = pd.read_csv('Desktop/rec_project2/content_metrics_table.csv')
+df_hybrid = pd.read_csv('Desktop/rec_project2/hybrid_metrics.csv')
 
 # Раздел с метриками коллаборативной фильтрации
 st.header('1. Коллаборативная фильтрация')
