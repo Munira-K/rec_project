@@ -14,10 +14,11 @@ import nltk
 import re
 import string
 
-# Загрузка NLTK данных
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('stopwords')
+for resource in ['punkt', 'wordnet', 'stopwords']:
+    try:
+        nltk.data.find(f'tokenizers/{resource}' if resource == 'punkt' else f'corpora/{resource}')
+    except LookupError:
+        nltk.download(resource)
 
 # Инициализация
 stop_words = set(stopwords.words('english'))
