@@ -31,8 +31,8 @@ st.markdown("""
 # Загрузка данных (замените на ваши реальные данные)
 @st.cache_data
 def load_data():
-    ratings = pd.read_csv('C://Users//user//Desktop//rec_project//df_ratings.csv')
-    courses = pd.read_csv('C://Users//user//Desktop//rec_project//info2022_final.csv')
+    ratings = pd.read_csv('df_ratings.csv')
+    courses = pd.read_csv('info2022_final.csv')
     return courses, ratings
 
 courses_df, ratings_df = load_data()
