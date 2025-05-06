@@ -6,4 +6,5 @@ pandas
 seaborn
 lightgbm
 gensim
-surprise 
+scikit-surprise
+
