@@ -13,9 +13,7 @@ from nltk.stem import WordNetLemmatizer
 import nltk
 import re
 import string
-
-import nltk
-nltk.download('punkt')
+nltk.data.path.append("./nltk_data")
 
 # Инициализация
 stop_words = set(stopwords.words('english'))
