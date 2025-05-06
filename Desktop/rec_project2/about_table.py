@@ -32,7 +32,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     ratings = pd.read_csv('Desktop/rec_project2/df_ratings.csv')
-    courses = pd.read_csv('info2022_final.csv')
+    courses = pd.read_csv('Desktop/rec_project2/info2022_final.csv')
     return courses, ratings
 
 courses_df, ratings_df = load_data()
