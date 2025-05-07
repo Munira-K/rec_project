@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title('📊 Сравнение моделей рекомендательных систем')
+st.title('📊 Сравнение метрик моделей')
 df_collab = pd.read_csv('Desktop/rec_project2/metrics_table.csv')
 df_content = pd.read_csv('Desktop/rec_project2/content_metrics_table.csv')
 df_hybrid = pd.read_csv('Desktop/rec_project2/hybrid_metrics.csv')
