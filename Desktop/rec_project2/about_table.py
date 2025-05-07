@@ -126,7 +126,7 @@ with tab3:
         st.info("Доступные числовые столбцы: " + ", ".join(courses_df.select_dtypes(include=['int64', 'float64']).columns.tolist()))
 
 
-col4 = st.columns(1)
+
 with col4:
     fig = px.histogram(ratings_df, x='rate', 
                       title='Распределение оценок',
