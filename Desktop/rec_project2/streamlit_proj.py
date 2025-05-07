@@ -57,7 +57,8 @@ df_courses['description'] = string_cols.apply(lambda row: ' '.join(filter(None, 
 def preprocess_text(text):
     text = str(text).lower()
     text = re.sub(r'[^a-zA-Z\s]', '', text)
-    tokens = word_tokenize(text)
+    # tokens = word_tokenize(text)
+    tokens = tokenize(text)
     tokens = [
         lemmatizer.lemmatize(word)
         for word in tokens
