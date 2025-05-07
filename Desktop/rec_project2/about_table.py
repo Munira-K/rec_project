@@ -126,13 +126,8 @@ with tab3:
         st.info("Доступные числовые столбцы: " + ", ".join(courses_df.select_dtypes(include=['int64', 'float64']).columns.tolist()))
 
 
-
-with col4:
-    fig = px.histogram(ratings_df, x='rate', 
-                      title='Распределение оценок',
-                      nbins=5,
-                      color_discrete_sequence=['#EF553B'])
-    st.plotly_chart(fig, use_container_width=True)
+fig = px.histogram(ratings_df, x='rate',  title='Распределение оценок', nbins=5,color_discrete_sequence=['#EF553B'])
+st.plotly_chart(fig, use_container_width=True)
 
 
 st.markdown('<div class="dataset-header">📋 Таблицы</div>', unsafe_allow_html=True)
