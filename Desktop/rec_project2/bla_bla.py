@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.set_page_config(layout="wide", page_title="О проекте")
+st.set_page_config(layout="wide", page_title="О проекте")
 st.title("🎯 Рекомендательная система онлайн курсов")
 
 
