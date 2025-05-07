@@ -100,7 +100,7 @@ def get_doc2vec_model(df_courses):
         
         # Сохраняем модель
         model.save(str(model_path))
-        st.success("Doc2Vec модель успешно создана и сохранена.")
+        # st.success("Doc2Vec модель успешно создана и сохранена.")
         return model
 
 # Загрузка KNN модели
