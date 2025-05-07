@@ -13,6 +13,9 @@ from nltk.stem import WordNetLemmatizer
 import nltk
 import re
 import string
+
+def tokenize(text):
+    return re.findall(r'\b\w+\b', text.lower())
 # nltk.data.path.append("./nltk_data")
 
 # Инициализация
