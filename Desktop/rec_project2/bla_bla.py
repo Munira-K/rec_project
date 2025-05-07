@@ -46,18 +46,6 @@ for step in steps:
             st.markdown(f"**{step['title']}**  \n{step['text']}")
         st.write("")
 
-st.markdown("""
-```mermaid
-graph TD
-    A[Сбор данных] --> B[Анализ]
-    B --> C[Подготовка]
-    C --> D[Обучение моделей]
-    D --> E[Интеграция]
-    E --> F[Оценка]
-    F --> G[Визуализация]""")
-
-st.divider()
-
 
 
 
