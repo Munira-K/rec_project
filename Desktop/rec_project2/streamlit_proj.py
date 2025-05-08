@@ -24,8 +24,8 @@ stop_words = set(["a", "the", "is", "in", "at", "which", "on", "for", "to", "and
 stemmer = PorterStemmer()
 # lemmatizer = WordNetLemmatizer()
 
-stemmer = PorterStemmer()
-tokens = [stemmer.stem(word) for word in tokens]
+# stemmer = PorterStemmer()
+# tokens = [stemmer.stem(word) for word in tokens]
 
 # Настройки страницы
 st.set_page_config(
