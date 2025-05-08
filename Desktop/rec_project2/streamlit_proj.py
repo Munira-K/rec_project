@@ -13,6 +13,7 @@ from nltk.stem import WordNetLemmatizer
 import nltk
 import re
 import string
+from nltk.stem.porter import PorterStemmer
 
 def tokenize(text):
     return re.findall(r'\b\w+\b', text.lower())
@@ -20,7 +21,10 @@ def tokenize(text):
 
 # Инициализация
 stop_words = set(["a", "the", "is", "in", "at", "which", "on", "for", "to", "and"])
-lemmatizer = WordNetLemmatizer()
+# lemmatizer = WordNetLemmatizer()
+
+stemmer = PorterStemmer()
+tokens = [stemmer.stem(word) for word in tokens]
 
 # Настройки страницы
 st.set_page_config(
