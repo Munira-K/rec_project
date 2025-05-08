@@ -58,16 +58,23 @@ string_cols = string_cols.fillna('').apply(lambda col: col.str.lower())
 df_courses['description'] = string_cols.apply(lambda row: ' '.join(filter(None, row)), axis=1)
 
 # Функция предобработки текста
+# def preprocess_text(text):
+#     text = str(text).lower()
+#     text = re.sub(r'[^a-zA-Z\s]', '', text)
+#     # tokens = word_tokenize(text)
+#     tokens = tokenize(text)
+#     tokens = [
+#         lemmatizer.lemmatize(word)
+#         for word in tokens
+#         if word.isalpha() and word not in stop_words and word not in set(string.punctuation)
+#     ]
+#     return tokens
+
 def preprocess_text(text):
-    text = str(text).lower()
-    text = re.sub(r'[^a-zA-Z\s]', '', text)
-    # tokens = word_tokenize(text)
-    tokens = tokenize(text)
-    tokens = [
-        lemmatizer.lemmatize(word)
-        for word in tokens
-        if word.isalpha() and word not in stop_words and word not in set(string.punctuation)
-    ]
+    text = text.lower()
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
+    words = word_tokenize(text)
+    tokens = [stemmer.stem(word) for word in words if len(word) > 2]
     return tokens
 
 # Создание или загрузка Doc2Vec модели
