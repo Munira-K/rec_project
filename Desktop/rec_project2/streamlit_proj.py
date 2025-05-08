@@ -21,6 +21,7 @@ def tokenize(text):
 
 # Инициализация
 stop_words = set(["a", "the", "is", "in", "at", "which", "on", "for", "to", "and"])
+stemmer = PorterStemmer()
 # lemmatizer = WordNetLemmatizer()
 
 stemmer = PorterStemmer()
