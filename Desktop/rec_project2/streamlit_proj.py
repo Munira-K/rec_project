@@ -19,7 +19,7 @@ def tokenize(text):
 # nltk.data.path.append("./nltk_data")
 
 # Инициализация
-stop_words = set(stopwords.words('english'))
+stop_words = set(["a", "the", "is", "in", "at", "which", "on", "for", "to", "and"])
 lemmatizer = WordNetLemmatizer()
 
 # Настройки страницы
