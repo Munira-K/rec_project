@@ -73,7 +73,8 @@ df_courses['description'] = string_cols.apply(lambda row: ' '.join(filter(None, 
 def preprocess_text(text):
     text = text.lower()
     text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    words = word_tokenize(text)  # ← сначала токенизация
+    # words = word_tokenize(text)  # ← сначала токенизация
+    words = text.split()
     tokens = [stemmer.stem(word) for word in words if len(word) > 2]  # ← потом стемминг
     return tokens
 
